@@ -6,6 +6,6 @@ class Student(models.Model):
     age = models.IntegerField()
     email = models.EmailField()
     address = models.TextField(null=True, blank=True)
-    File = models.FileField()
+    
     
 
