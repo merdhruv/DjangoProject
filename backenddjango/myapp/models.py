@@ -8,4 +8,5 @@ class Student(models.Model):
     address = models.TextField(null=True, blank=True)
     
     
-
+class Product(models.Model):
+    pass
