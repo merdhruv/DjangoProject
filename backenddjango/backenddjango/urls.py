@@ -17,8 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from myapp.views import *
+from vege.views import *
 
 urlpatterns = [
+
+    path('reciepes/', recipes, name = "reciepes"),
+
+
     path('', index, name = "index"),
     path('about/', about, name = "about"),
     path('contact/', contact, name = "contact"),
