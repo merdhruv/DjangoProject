@@ -12,8 +12,10 @@ def recipes(request):
         
         reciepes_image = request.FILES.get('reciepe_image')
 
-        print(reciepes_name)
-        print(reciepes_description)
-        print(reciepes_image)
-        
+        Reciepe.objects.create(
+        reciepe_name = reciepes_name,
+        reciepe_description = reciepes_description,
+        reciepe_image = reciepes_image,
+        )
+
     return render(request, "reciepes.html")
