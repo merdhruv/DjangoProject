@@ -23,6 +23,26 @@
             
             <button type="submit" class="btn btn-success">Add Reciepe</button>
           </form>
-          {{reciepes}}
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Reciepe Name</th>
+                <th scope="col">Reciepe Desc</th>
+                <th scope="col">Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%for recipe in reciepes%}
+              <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{recipe.reciepe_name}}</td>
+                <td>{{recipe.reciepe_description |truncatechars:60}}</td>
+                <td>{{reciepe.reciepe_image}}</td>
+              </tr>
+            {%endfor%}
+            </tbody>
+          </table>
     </div>
 {%endblock%}
