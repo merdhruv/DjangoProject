@@ -20,11 +20,12 @@ from myapp.views import *
 from vege.views import *
 from django.conf.urls.static import static
 from django.conf import settings
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns 
 
 urlpatterns = [
 
     path('reciepes/', recipes, name = "reciepes"),
+    path('delete-reciepe/<id>/', delete_reciepe, name = "delete_reciepe"),
 
 
     path('', index, name = "index"),

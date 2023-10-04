@@ -31,6 +31,7 @@
                 <th scope="col">Reciepe Name</th>
                 <th scope="col">Reciepe Desc</th>
                 <th scope="col">Image</th>
+                <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -39,7 +40,11 @@
                 <th scope="row">{{forloop.counter}}</th>
                 <td>{{recipe.reciepe_name}}</td>
                 <td>{{recipe.reciepe_description |truncatechars:60}}</td>
-                <td>{{reciepe.reciepe_image}}</td>
+                <td>
+                 <img src = "/media/ {{recipe.reciepe_image}}" style = "height: 200px;"></td>
+                 <td>
+                  <a href = "/delete-reciepe/{{recipe.id}}" class ="btn btn-danger">DELETE</a>
+                 </td>
               </tr>
             {%endfor%}
             </tbody>
